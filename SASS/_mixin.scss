@@ -1,0 +1,19 @@
+@mixin cuadrado ($fondo) {
+    background-color: $fondo;  
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.cuadrado-1{
+    @include cuadrado(rgba(227, 9, 9, 0.467));
+}
+
+.cuadrado-2{
+    @include cuadrado(rgba(9, 227, 9, 0.642));
+}
+
+.cuadrado-3{
+    @include cuadrado(rgba(9, 34, 227, 0.495));
+}

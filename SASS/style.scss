@@ -1,0 +1,61 @@
+@import 'mixin';
+
+$redes: (
+    twitter: #55acee,
+    facebook:  #3a5795,
+    send-mail: #C25E30
+); 
+
+    
+@each $red, $color in $redes {
+    .btn--#{$red} {
+        background-color: $color;
+    }
+ }
+ 
+
+ $estilos: (
+    color: #3673D9,
+    centro: center,
+    tFuente: 35px,
+    1rem : 1rem
+  );
+  
+  .map-get {
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    padding: map-get($estilos, 1rem);
+    font-size:map-get($estilos, tFuente);
+  }
+  
+
+  .boton {
+	width:200px;
+	height:50px;
+	background-color:white;
+	text-align:center;
+	color:black;
+	border-radius:20px;
+	border:1px solid black;
+}
+
+.boton--aceptar{
+	@extend .boton;
+	background-color:green;
+	color:yellow;
+}
+
+.boton--cancelar{
+	@extend .boton;
+	background-color:red;
+	color:yellow;
+}
+
+
+
+
+
+
+
+
+
